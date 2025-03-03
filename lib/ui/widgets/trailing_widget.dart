@@ -6,7 +6,7 @@ import '../../core/utils/ScreenUiHelper.dart';
 
 class TrailingInfo extends StatelessWidget {
   const TrailingInfo({
-    Key? key,
+    super.key,
     this.leadingWidget,
     this.middleWidget,
     this.trailingWidget,
@@ -18,7 +18,7 @@ class TrailingInfo extends StatelessWidget {
     this.onTrailingWidgetPressed,
     this.onLeadingWidgetPressed,
     this.crossAxisAlignment = CrossAxisAlignment.end,
-  }) : super(key: key);
+  });
 
   final Widget? leadingWidget;
   final Widget? middleWidget;
@@ -73,7 +73,7 @@ class TrailingInfo extends StatelessWidget {
                 child: Text(
                   info ?? PersonalDetails.email,
                   textAlign: TextAlign.end,
-                  style: theme.textTheme.bodyText1!.copyWith(
+                  style: theme.textTheme.titleMedium!.copyWith(
                     color: uiHelper.textPrimaryColor,
                     letterSpacing: 3,
                     fontWeight: FontWeight.w200,
@@ -102,6 +102,7 @@ class TrailingInfo extends StatelessWidget {
 
 class CircularContainer extends StatelessWidget {
   const CircularContainer({
+    super.key,
     this.child,
     this.width = 40,
     this.height = 40,

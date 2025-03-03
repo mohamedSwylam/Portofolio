@@ -7,6 +7,7 @@ import 'custom shapes/tree_painter.dart';
 
 class ExperienceTree extends StatelessWidget {
   const ExperienceTree({
+    super.key,
     required this.experienceData,
     this.head,
     this.widthOfTree,
@@ -51,7 +52,7 @@ class ExperienceTree extends StatelessWidget {
               style: headTitleStyle ??
                   Theme.of(context)
                       .textTheme
-                      .headline6!
+                      .titleMedium!
                       .copyWith(color: uiHelper.primaryColor),
             ),
           ),
@@ -75,7 +76,7 @@ class ExperienceTree extends StatelessWidget {
               style: tailTitleStyle ??
                   Theme.of(context)
                       .textTheme
-                      .subtitle1!
+                      .titleMedium!
                       .copyWith(color: uiHelper.primaryColor),
             ),
           ),
@@ -111,7 +112,7 @@ class ExperienceTree extends StatelessWidget {
 
 class ExperienceBranch extends StatefulWidget {
   const ExperienceBranch({
-    Key? key,
+    super.key,
     this.width,
     this.stalk = 0.1,
     this.height = 200,
@@ -122,7 +123,7 @@ class ExperienceBranch extends StatefulWidget {
     this.position,
     this.roles,
     this.customPainter,
-  }) : super(key: key);
+  });
 
   final double? width;
   final double stalk;
@@ -149,7 +150,7 @@ class _ExperienceBranchState extends State<ExperienceBranch> {
   void initState() {
     offsetRoleLeaf = (widget.height / 5) - 10;
     offsetLocationLeaf = (widget.height / 2) - 16;
-    WidgetsBinding.instance!.addPostFrameCallback((_) {
+    WidgetsBinding.instance.addPostFrameCallback((_) {
       _getHeightOfRoleLeaf();
     });
     super.initState();
@@ -217,6 +218,7 @@ class _ExperienceBranchState extends State<ExperienceBranch> {
 
 class LocationDateLeaf extends StatelessWidget {
   const LocationDateLeaf({
+    super.key,
     required this.duration,
     required this.location,
     this.durationIcon,
@@ -245,7 +247,7 @@ class LocationDateLeaf extends StatelessWidget {
               Text(
                 duration!,
                 style: durationTextStyle ??
-                    theme.textTheme.bodyText2!
+                    theme.textTheme.titleMedium!
                         .copyWith(color: uiHelper.textPrimaryColor),
               ),
               const SizedBox(width: 4),
@@ -263,7 +265,7 @@ class LocationDateLeaf extends StatelessWidget {
               Text(
                 location!,
                 style: locationTextStyle ??
-                    theme.textTheme.bodyText2!
+                    theme.textTheme.titleMedium!
                         .copyWith(color: uiHelper.textSecondaryColor),
               ),
               const SizedBox(width: 4),
@@ -277,6 +279,7 @@ class LocationDateLeaf extends StatelessWidget {
 
 class RoleLeaf extends StatelessWidget {
   const RoleLeaf({
+    super.key,
     required this.company,
     required this.position,
     required this.roles,
@@ -307,14 +310,14 @@ class RoleLeaf extends StatelessWidget {
             child: Text(
               company!,
               style: companyTextStyle ??
-                  theme.textTheme.subtitle1!
+                  theme.textTheme.titleMedium!
                       .copyWith(fontSize: 18, color: uiHelper.primaryColor),
             ),
           ),
           Text(
             position!,
             style: positionTextStyle ??
-                theme.textTheme.subtitle2!.copyWith(
+                theme.textTheme.titleMedium!.copyWith(
                     fontStyle: FontStyle.italic,
                     color: uiHelper.textPrimaryColor),
           ),
@@ -343,7 +346,7 @@ class RoleLeaf extends StatelessWidget {
         Role(
           role: roles[index],
           roleTextStyle: roleTextStyle ??
-              theme.textTheme.bodyText2!
+              theme.textTheme.titleMedium!
                   .copyWith(color: uiHelper.textSecondaryColor),
         ),
       );
@@ -356,6 +359,7 @@ class RoleLeaf extends StatelessWidget {
 
 class Role extends StatelessWidget {
   const Role({
+    super.key,
     required this.role,
     this.roleTextStyle,
     this.icon = Icons.arrow_right,
@@ -385,7 +389,7 @@ class Role extends StatelessWidget {
           child: Text(
             role,
             style: roleTextStyle ??
-                theme.textTheme.bodyText1!.copyWith(
+                theme.textTheme.titleMedium!.copyWith(
                   color: uiHelper.textPrimaryColor,
                 ),
           ),

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 
 class LocationDateWidget extends StatelessWidget {
   const LocationDateWidget({
-    Key? key,
+    super.key,
     required this.duration,
     this.durationTextStyle,
     required this.location,
     this.locationTextStyle,
     this.locationIcon,
     this.durationIcon,
-  }) : super(key: key);
+  });
 
   final String duration;
   final TextStyle? durationTextStyle;
@@ -30,7 +30,7 @@ class LocationDateWidget extends StatelessWidget {
               Text(
                 duration,
                 style: durationTextStyle ??
-                    theme.textTheme.bodyText2!.copyWith(color: Colors.black),
+                    theme.textTheme.titleMedium!.copyWith(color: Colors.black),
               ),
               const SizedBox(height: 5),
               const Icon(
@@ -47,7 +47,7 @@ class LocationDateWidget extends StatelessWidget {
               Text(
                 location,
                 style: locationTextStyle ??
-                    theme.textTheme.bodyText2!.copyWith(color: Colors.black),
+                    theme.textTheme.titleMedium!.copyWith(color: Colors.black),
               ),
               const SizedBox(
                 height: 5,

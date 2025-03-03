@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class FlickerTextAnimation extends StatefulWidget {
   FlickerTextAnimation({
-    Key? key,
+    super.key,
     required this.controller,
     this.textColor,
     this.fadeInColor,
@@ -39,8 +39,7 @@ class FlickerTextAnimation extends StatefulWidget {
               curve: Curves.easeIn,
             ),
           ),
-        ),
-        super(key: key);
+        );
 
   final Animation<double> controller;
   final Animation<Color?> color;
@@ -66,14 +65,14 @@ class _FlickerTextAnimationState extends State<FlickerTextAnimation> {
   void initState() {
     widget.controller.addStatusListener((status) {
       if (status == AnimationStatus.forward) {
-        WidgetsBinding.instance!.addPostFrameCallback((_) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
           setState(() {
             isAnimating = true;
           });
         });
       }
       if (status == AnimationStatus.completed) {
-        WidgetsBinding.instance!.addPostFrameCallback((_) {
+        WidgetsBinding.instance.addPostFrameCallback((_) {
           setState(() {
             isAnimating = false;
           });
@@ -92,7 +91,7 @@ class _FlickerTextAnimationState extends State<FlickerTextAnimation> {
         Text(
           isAnimating ? widget.title.value.toString() : widget.text,
           style: widget.textStyle ??
-              theme.textTheme.headline6!.copyWith(
+              theme.textTheme.titleMedium!.copyWith(
                 color: widget.color.value,
                 fontSize: widget.fontSize,
               ),

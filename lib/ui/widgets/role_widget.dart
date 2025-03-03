@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 class Role extends StatelessWidget {
   const Role({
-    Key? key,
+    super.key,
     required this.role,
     this.roleTextStyle,
     this.icon = Icons.arrow_right,
     this.iconSize = 18,
-  }) : super(key: key);
+  });
 
   final String role;
   final TextStyle? roleTextStyle;
@@ -29,7 +29,7 @@ class Role extends StatelessWidget {
           child: Text(
             role,
             style: roleTextStyle ??
-                theme.textTheme.bodyText1!.copyWith(
+                theme.textTheme.titleMedium!.copyWith(
                   color: const Color(0xff75809C),
                 ),
           ),
