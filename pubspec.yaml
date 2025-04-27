@@ -37,7 +37,7 @@ dependencies:
   # flutter_icons:
   #   path: C:/Users/Modather/FlutterProjects/GithubProjects/flutter-icons-master
 
-  # font_awesome_flutter: ^10.8.0
+  font_awesome_flutter: ^10.8.0
 
   #*Architecture
   # stacked: ^3.4.4
@@ -49,7 +49,7 @@ dependencies:
   # url_strategy: ^0.3.0
 
   #*Services
-  # url_launcher: ^6.0.12
+  url_launcher: ^6.0.12
   # http: ^1.3.0
 
   #*Utilities
