@@ -1,4 +1,5 @@
 import 'package:any_link_preview/any_link_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -21,6 +22,7 @@ class LinkPreviewCard extends StatelessWidget {
         displayDirection: UIDirection.uiDirectionHorizontal,
         removeElevation: true,
         previewHeight: 100,
+        proxyUrl: kIsWeb ? 'https://cors-anywhere.herokuapp.com/' : null,
       ),
     );
   }
