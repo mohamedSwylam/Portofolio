@@ -36,12 +36,17 @@ class ContactSection extends StatelessWidget {
               const SizedBox(width: 16),
               SocialButton(
                 icon: FontAwesomeIcons.linkedin,
-                url: 'https://www.linkedin.com/in/modather-ali/',
+                url: 'https://www.linkedin.com/in/modather-ali',
               ),
               const SizedBox(width: 16),
               SocialButton(
                 icon: FontAwesomeIcons.github,
                 url: 'https://github.com/modather-ali',
+              ),
+              const SizedBox(width: 16),
+              SocialButton(
+                icon: FontAwesomeIcons.whatsapp,
+                url: 'https://wa.me/+201557016433',
               ),
             ],
           ),
