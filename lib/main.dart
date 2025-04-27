@@ -1,32 +1,36 @@
-import 'package:flutter/foundation.dart';
-import 'package:flutter_neumorphic/flutter_neumorphic.dart';
-import 'package:stacked_services/stacked_services.dart';
-import 'package:url_strategy/url_strategy.dart';
+import 'package:flutter/material.dart';
 
-import 'app/locator.dart';
-import 'app/theme.dart';
-import 'ui/views/main/main_view.dart';
+import 'screens/portfolio_home_page.dart';
 
-Future main() async {
-  setPathUrlStrategy();
-  await setupLocator();
-  runApp(MyApp());
+void main() {
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return NeumorphicApp(
-      navigatorKey: StackedService.navigatorKey,
-      title: 'Shashi Kumar',
+    return MaterialApp(
+      title: 'Portfolio',
       debugShowCheckedModeBanner: false,
-      home: const MainView(),
-      themeMode: ((defaultTargetPlatform == TargetPlatform.iOS) ||
-              (defaultTargetPlatform == TargetPlatform.android))
-          ? ThemeMode.dark
-          : ThemeMode.light,
-      theme: neumorphicLightTheme,
-      darkTheme: neumorphicDarkTheme,
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.blue,
+        scaffoldBackgroundColor: const Color(0xFF1A1A1A),
+        textTheme: const TextTheme(
+          displayLarge: TextStyle(
+            fontSize: 32,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+          bodyLarge: TextStyle(
+            fontSize: 16,
+            color: Colors.white70,
+          ),
+        ),
+      ),
+      home: const PortfolioHomePage(),
     );
   }
 }
