@@ -56834,7 +56834,7 @@ A.x9.prototype={
 S(a){var s=null
 return A.y3(A.KX(A.b([B.JW,B.FO,B.JY,B.ek,B.JV,B.FP,new A.yI(new A.JD(),s,s,s,A.agl(s,s,B.a5,s,s,s,s,s,s,s,s,s,B.xX,s,s,s,s,s,s),s,s,!1,s,B.JZ,s)],t.nA),B.aH),s,s,s,B.fc,s)}}
 A.JD.prototype={
-$0(){A.a2W(A.fR("assets/Modather_CV.pdf",0,null))},
+$0(){A.a2W(A.fR("https://www.canva.com/design/DAGmlFllxM0/8VQsBL-U4l3smi8J8qoC0g/view?utm_content=DAGmlFllxM0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h66ec8f1ba7",0,null))},
 $S:0}
 A.y1.prototype={
 S(a){var s=null,r=t.nA

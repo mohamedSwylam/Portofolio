@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/data/data.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AboutSection extends StatelessWidget {
@@ -40,7 +41,7 @@ class AboutSection extends StatelessWidget {
           const SizedBox(height: 32),
           ElevatedButton(
             onPressed: () {
-              launchUrl(Uri.parse('assets/Modather_CV.pdf'));
+              launchUrl(Uri.parse(Data.cvURL));
             },
             style: ElevatedButton.styleFrom(
               padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
