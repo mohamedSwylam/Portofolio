@@ -91,7 +91,7 @@ flutter:
 
   assets:
     - assets/images/
-    - assets/Modather_CV.pdf
+    - assets/icons/
 
   fonts:
     - family: Lora
