@@ -15,6 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Modather Portfolio',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Rubik',
         brightness: Brightness.dark,
         primaryColor: Colors.blue,
         scaffoldBackgroundColor: const Color(0xFF1A1A1A),

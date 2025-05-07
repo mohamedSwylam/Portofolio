@@ -96,9 +96,11 @@ flutter:
     - assets/icons/
 
   fonts:
-    - family: Lora
+    - family: Rubik
       fonts:
-        - asset: assets/fonts/Lora.ttf
-    - family: Montserrat
-      fonts:
-        - asset: assets/fonts/Montserrat.ttf
+        - asset: assets/fonts/Rubik-Black.ttf
+        - asset: assets/fonts/Rubik-Bold.ttf
+        - asset: assets/fonts/Rubik-Italic.ttf
+        - asset: assets/fonts/Rubik-Light.ttf
+        - asset: assets/fonts/Rubik-Medium.ttf
+        - asset: assets/fonts/Rubik-Regular.ttf

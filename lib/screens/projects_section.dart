@@ -1,8 +1,10 @@
 import 'package:animations/animations.dart';
 import 'package:fluid_dialog/fluid_dialog.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/data/data.dart';
 import 'package:portfolio/data/modules/project.dart';
+import 'package:portfolio/services/helper_services.dart';
 
 class ProjectsSection extends StatelessWidget {
   const ProjectsSection({super.key});
@@ -134,10 +136,10 @@ class AppInfoDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 300,
-      width: MediaQuery.of(context).size.width * 0.8,
-      padding: const EdgeInsets.all(10),
+      width: MediaQuery.of(context).size.width * 0.9,
+      padding: const EdgeInsets.all(15),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -173,11 +175,72 @@ class AppInfoDialog extends StatelessWidget {
           Text(
             project.description,
             style: const TextStyle(
-              fontSize: 16,
               color: Colors.grey,
             ),
           ),
+          const SizedBox(height: 10),
+          Text(
+            'Links:',
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+          const SizedBox(height: 10),
+          Row(
+            children: [
+              if (project.googlePlayUrl.isNotEmpty)
+                ProjectUrlIcon(
+                  color: Colors.green,
+                  icon: FontAwesomeIcons.googlePlay,
+                  url: project.googlePlayUrl,
+                ),
+              const SizedBox(width: 25),
+              if (project.appStoreUrl.isNotEmpty)
+                ProjectUrlIcon(
+                  color: Colors.blue,
+                  icon: FontAwesomeIcons.appStoreIos,
+                  url: project.appStoreUrl,
+                ),
+              const SizedBox(width: 25),
+              if (project.websiteUrl.isNotEmpty)
+                ProjectUrlIcon(
+                  color: Colors.purple,
+                  icon: Icons.web,
+                  url: project.websiteUrl,
+                ),
+            ],
+          )
         ],
+      ),
+    );
+  }
+}
+
+class ProjectUrlIcon extends StatelessWidget {
+  final Color color;
+  final IconData icon;
+  final String url;
+  const ProjectUrlIcon({
+    super.key,
+    required this.color,
+    required this.icon,
+    required this.url,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      color: color,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
+      child: IconButton(
+        onPressed: () {
+          HelperServices.lunchUrl(url);
+        },
+        icon: Icon(
+          icon,
+          color: Colors.white,
+        ),
       ),
     );
   }

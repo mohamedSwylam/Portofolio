@@ -1,20 +1,20 @@
 class Project {
-  String? id;
+  String id;
   String name;
   String description;
   String icon;
-  String? googlePlayUrl;
-  String? appStoreUrl;
-  String? websiteUrl;
+  String googlePlayUrl;
+  String appStoreUrl;
+  String websiteUrl;
 
   Project({
-    this.id,
+    this.id = '',
     required this.name,
     required this.description,
     required this.icon,
-    this.googlePlayUrl,
-    this.appStoreUrl,
-    this.websiteUrl,
+    this.googlePlayUrl = '',
+    this.appStoreUrl = '',
+    this.websiteUrl = '',
   });
 
   // Project.fromJson(Map<String, dynamic> json) {
