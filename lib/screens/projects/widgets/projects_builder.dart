@@ -16,9 +16,9 @@ class ProjectsBuilder extends StatelessWidget {
       ),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: Data.projects.length,
+      itemCount: AppData.projects.length,
       itemBuilder: (context, index) {
-        final project = Data.projects[index];
+        final project = AppData.projects[index];
         return AppWidget(project: project);
       },
     );
