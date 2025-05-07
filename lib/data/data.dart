@@ -29,7 +29,7 @@ class Data {
           'https://apps.apple.com/gb/app/origo-productions/id6474433384',
     ),
     Project(
-      name: 'Awradi - Daily Dhikr',
+      name: 'Awradi',
       description:
           'An app that helps you commit to a daily recitation of dhikr through daily reminders and short 10-minute recitations.',
       googlePlayUrl:

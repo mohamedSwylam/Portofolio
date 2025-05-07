@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio/screens/widgets/social_button.dart';
+import 'package:portfolio/screens/widgets/custom_icon_button.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({
@@ -29,22 +29,22 @@ class ContactSection extends StatelessWidget {
           const SizedBox(height: 24),
           Row(
             children: [
-              SocialButton(
+              CustomIconButton(
                 icon: FontAwesomeIcons.envelope,
                 url: 'mailto:modather0ali@gmail.com',
               ),
               const SizedBox(width: 16),
-              SocialButton(
+              CustomIconButton(
                 icon: FontAwesomeIcons.linkedin,
                 url: 'https://www.linkedin.com/in/modather-ali',
               ),
               const SizedBox(width: 16),
-              SocialButton(
+              CustomIconButton(
                 icon: FontAwesomeIcons.github,
                 url: 'https://github.com/modather-ali',
               ),
               const SizedBox(width: 16),
-              SocialButton(
+              CustomIconButton(
                 icon: FontAwesomeIcons.whatsapp,
                 url: 'https://wa.me/+201557016433',
               ),

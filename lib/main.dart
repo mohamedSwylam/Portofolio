@@ -1,3 +1,4 @@
+import 'package:flex_color_scheme/flex_color_scheme.dart';
 import 'package:flutter/material.dart';
 
 import 'screens/portfolio_home_page.dart';
@@ -14,22 +15,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Modather Portfolio',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
+      theme: FlexThemeData.dark(
         fontFamily: 'Rubik',
-        brightness: Brightness.dark,
-        primaryColor: Colors.blue,
-        scaffoldBackgroundColor: const Color(0xFF1A1A1A),
-        textTheme: const TextTheme(
-          displayLarge: TextStyle(
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-            color: Colors.white,
-          ),
-          bodyLarge: TextStyle(
-            fontSize: 16,
-            color: Colors.white70,
-          ),
-        ),
+        scheme: FlexScheme.blue,
+        scaffoldBackground: const Color(0xFF1A1A2E),
       ),
       home: const PortfolioHomePage(),
     );

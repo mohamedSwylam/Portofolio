@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class SocialButton extends StatelessWidget {
+class CustomIconButton extends StatelessWidget {
   final IconData icon;
   final String url;
-  const SocialButton({
+  final Color color;
+  const CustomIconButton({
     super.key,
     required this.icon,
     required this.url,
+    this.color = Colors.blue,
   });
 
   @override
@@ -19,12 +21,12 @@ class SocialButton extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: Colors.blue.withOpacity(0.2),
+          color: color.withOpacity(0.2),
           borderRadius: BorderRadius.circular(8),
         ),
         child: Icon(
           icon,
-          color: Colors.blue,
+          color: color,
           size: 24,
         ),
       ),

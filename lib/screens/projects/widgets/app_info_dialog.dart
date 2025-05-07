@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/data/modules/project.dart';
-import 'package:portfolio/screens/projects/widgets/project_url_icon.dart';
+import 'package:portfolio/screens/widgets/custom_icon_button.dart';
 
 class AppInfoDialog extends StatelessWidget {
   const AppInfoDialog({
@@ -65,29 +65,37 @@ class AppInfoDialog extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 10),
-          Row(
-            children: [
-              if (project.googlePlayUrl.isNotEmpty)
-                ProjectUrlIcon(
-                  color: Colors.green,
-                  icon: FontAwesomeIcons.googlePlay,
-                  url: project.googlePlayUrl,
-                ),
-              const SizedBox(width: 25),
-              if (project.appStoreUrl.isNotEmpty)
-                ProjectUrlIcon(
-                  color: Colors.blue,
-                  icon: FontAwesomeIcons.appStoreIos,
-                  url: project.appStoreUrl,
-                ),
-              const SizedBox(width: 25),
-              if (project.websiteUrl.isNotEmpty)
-                ProjectUrlIcon(
-                  color: Colors.purple,
-                  icon: Icons.web,
-                  url: project.websiteUrl,
-                ),
-            ],
+          Container(
+            padding: const EdgeInsets.all(5),
+            decoration: BoxDecoration(
+              color: Colors.blueGrey.withOpacity(0.2),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                if (project.googlePlayUrl.isNotEmpty)
+                  CustomIconButton(
+                    color: Colors.green,
+                    icon: FontAwesomeIcons.googlePlay,
+                    url: project.googlePlayUrl,
+                  ),
+                if (project.googlePlayUrl.isNotEmpty) const SizedBox(width: 25),
+                if (project.appStoreUrl.isNotEmpty)
+                  CustomIconButton(
+                    color: Colors.blue,
+                    icon: FontAwesomeIcons.appStoreIos,
+                    url: project.appStoreUrl,
+                  ),
+                if (project.appStoreUrl.isNotEmpty) const SizedBox(width: 25),
+                if (project.websiteUrl.isNotEmpty)
+                  CustomIconButton(
+                    color: Colors.purple,
+                    icon: Icons.web,
+                    url: project.websiteUrl,
+                  ),
+              ],
+            ),
           )
         ],
       ),
