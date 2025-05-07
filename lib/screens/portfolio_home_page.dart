@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'about_section.dart';
-import 'contact_section.dart';
-import 'projects_section.dart';
-import 'skills_section.dart';
+import 'about/about_section.dart';
+import 'contact/contact_section.dart';
+import 'projects/projects_section.dart';
+import 'skills/skills_section.dart';
 
 class PortfolioHomePage extends StatelessWidget {
   const PortfolioHomePage({super.key});
@@ -20,7 +20,7 @@ class PortfolioHomePage extends StatelessWidget {
             ContactSection(),
             const SizedBox(height: 10),
             Text('Made with Flutter 💙 by Modather Ali'),
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
           ],
         ),
       ),

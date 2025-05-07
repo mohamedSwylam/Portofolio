@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/widgets/skill_chip.dart';
+import 'package:portfolio/screens/skills/widgets/skill_chip.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({

@@ -1,0 +1,26 @@
+import 'package:flutter/material.dart';
+import 'package:portfolio/data/data.dart';
+import 'package:portfolio/screens/projects/widgets/app_widget.dart';
+
+class ProjectsBuilder extends StatelessWidget {
+  const ProjectsBuilder({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return GridView.builder(
+      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: 2,
+        childAspectRatio: 0.9,
+        crossAxisSpacing: 10,
+        mainAxisSpacing: 10,
+      ),
+      shrinkWrap: true,
+      physics: const NeverScrollableScrollPhysics(),
+      itemCount: Data.projects.length,
+      itemBuilder: (context, index) {
+        final project = Data.projects[index];
+        return AppWidget(project: project);
+      },
+    );
+  }
+}
