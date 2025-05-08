@@ -3,7 +3,7 @@ import 'modules/project.dart';
 class AppData {
   static List<Project> projects = [
     Project(
-      name: ' Origo',
+      name: 'Origo',
       description:
           'The official app for the Arabic drama podcast series and episodes from Origo Productions.',
       icon: 'assets/icons/origo.png',
@@ -37,7 +37,7 @@ class AppData {
       name: 'Meditation time',
       description:
           'An application that contains a library of musical melodies and soothing audio recordings, which are used in meditation sessions.',
-      websiteUrl:
+      googlePlayUrl:
           'https://play.google.com/store/apps/details?id=app.meditationtime.meditation_time',
       icon: 'assets/icons/meditation_time.png',
     ),
