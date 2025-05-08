@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:portfolio/resource/constants.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -12,21 +13,21 @@ class TestScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Lottie.asset(
-            'assets/animated_icons/muscle.json',
+            Constants.muscleIcon,
             height: 50,
           ),
           SizedBox(
             height: 20,
           ),
           Image.asset(
-            'assets/animated_icons/rocket.webp',
+            Constants.rocketICon,
             height: 150,
           ),
           SizedBox(
             height: 20,
           ),
           Lottie.asset(
-            'assets/animated_icons/message_send.json',
+            Constants.starIcon,
             height: 80,
           ),
           SizedBox(

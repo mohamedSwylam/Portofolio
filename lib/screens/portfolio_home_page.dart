@@ -24,15 +24,19 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: PageView(
-        scrollDirection: Axis.vertical,
-        controller: _pageController,
-        children: [
-          AboutSection(),
-          SkillsSection(),
-          ProjectsSection(),
-          ContactSection(),
-        ],
+      body: Scrollbar(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 24),
+          child: PageView(
+            scrollDirection: Axis.vertical,
+            children: [
+              AboutSection(),
+              SkillsSection(),
+              ProjectsSection(),
+              ContactSection(),
+            ],
+          ),
+        ),
       ),
     );
   }
