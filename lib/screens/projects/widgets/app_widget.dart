@@ -46,10 +46,10 @@ class AppWidget extends StatelessWidget {
         children: [
           Card(
             child: Container(
-              width: MediaQuery.of(context).size.width * 0.3,
-              height: MediaQuery.of(context).size.width * 0.3,
+              width: MediaQuery.of(context).size.width * 0.2,
+              height: MediaQuery.of(context).size.width * 0.2,
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
+                  borderRadius: BorderRadius.circular(10),
                   image: DecorationImage(
                     image: AssetImage(project.icon),
                   )),
@@ -57,8 +57,9 @@ class AppWidget extends StatelessWidget {
           ),
           Text(
             project.name,
+            textAlign: TextAlign.center,
             style: const TextStyle(
-              fontSize: 16,
+              // fontSize: 16,
               fontWeight: FontWeight.bold,
             ),
           ),

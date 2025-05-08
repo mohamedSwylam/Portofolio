@@ -35,11 +35,10 @@ class AboutSection extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         fontFamily: Constants.fontFamily,
                       ),
-                      speed: const Duration(milliseconds: 200),
+                      speed: const Duration(milliseconds: 100),
                     ),
                   ],
                   totalRepeatCount: 1,
-                  pause: const Duration(milliseconds: 100),
                 ),
               ),
             ],
@@ -49,19 +48,20 @@ class AboutSection extends StatelessWidget {
           const SizedBox(height: 24),
           const Text(
             'I create beautiful and functional mobile applications with Flutter, I have +3 years of experience dealing with Flutter framework, Passionate about clean code and great user experiences.',
+            textAlign: TextAlign.justify,
             style: TextStyle(
               fontSize: 18,
               color: Colors.white70,
             ),
           ),
           const SizedBox(height: 32),
-          ElevatedButton(
+          OutlinedButton(
             onPressed: () {
               launchUrl(Uri.parse(Constants.cvURL));
             },
-            style: ElevatedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 16),
-              backgroundColor: Colors.blue,
+            style: OutlinedButton.styleFrom(
+              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+              // backgroundColor: Colors.blue,
             ),
             child: const Text(
               'View CV',

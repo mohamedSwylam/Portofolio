@@ -13,7 +13,19 @@ class ContactSection extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 48),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          const Text(
+            'Recommendations',
+            style: TextStyle(
+              fontSize: 32,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Placeholder(
+            fallbackHeight: MediaQuery.of(context).size.height * 0.4,
+            fallbackWidth: MediaQuery.of(context).size.width,
+          ),
           const Text(
             'Get in Touch',
             style: TextStyle(
@@ -50,6 +62,9 @@ class ContactSection extends StatelessWidget {
               ),
             ],
           ),
+          const SizedBox(height: 10),
+          Text('Made with Flutter 💙 by Modather Ali'),
+          const SizedBox(height: 15),
         ],
       ),
     );
