@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:portfolio/data/modules/project.dart';
+import 'package:portfolio/modules/project.dart';
 import 'package:portfolio/screens/widgets/custom_icon_button.dart';
 
 class AppInfoDialog extends StatelessWidget {

@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:portfolio/screens/skills/widgets/skill_chip.dart';
 import 'package:portfolio/screens/widgets/fading_translate_widget.dart';
 
+import '../../modules/skill.dart';
 import '../../resource/constants.dart';
 
 class SkillsSection extends StatelessWidget {
@@ -36,12 +37,14 @@ class SkillsSection extends StatelessWidget {
             spacing: 16,
             runSpacing: 16,
             children: [
-              SkillChip(skill: 'Flutter'),
-              SkillChip(skill: 'Dart'),
-              SkillChip(skill: 'Firebase'),
-              SkillChip(skill: 'REST APIs'),
-              SkillChip(skill: 'Git'),
-              SkillChip(skill: 'UI/UX Design'),
+              ...skills
+                  .map(
+                    (skill) => SkillChip(
+                      skill: skill.name,
+                      icon: skill.icon,
+                    ),
+                  )
+                  .toList(),
             ],
           ),
         ],

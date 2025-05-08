@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/data/data.dart';
 import 'package:portfolio/screens/projects/widgets/app_widget.dart';
+
+import '../../../modules/project.dart';
 
 class ProjectsBuilder extends StatelessWidget {
   const ProjectsBuilder({super.key});
@@ -16,9 +17,9 @@ class ProjectsBuilder extends StatelessWidget {
       ),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
-      itemCount: AppData.projects.length,
+      itemCount: projects.length,
       itemBuilder: (context, index) {
-        final project = AppData.projects[index];
+        final project = projects[index];
         return AppWidget(project: project);
       },
     );
