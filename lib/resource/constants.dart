@@ -6,6 +6,11 @@ class Constants {
 
   static String avatarImage = 'assets/images/avatar.png';
 
+  static String muscleIcon = 'assets/animated_icons/muscle.json';
+  static String rocketICon = 'assets/animated_icons/rocket.webp';
+  static String starIcon = 'assets/animated_icons/star.webp';
+  static String messageIcon = 'assets/animated_icons/message_send.json';
+
   static String fontFamily = 'Rubik';
 
   static const MaterialColor primaryColor = Colors.blue;
