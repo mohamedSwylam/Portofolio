@@ -27,14 +27,7 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
     return Scaffold(
       body: Stack(
         children: [
-          // Lottie.asset(
-          //   Constants.backgroundImage,
-          //   fit: BoxFit.cover,
-          //   height: MediaQuery.of(context).size.height,
-          //   width: MediaQuery.of(context).size.width,
-          // ),
           ColoredBackGround(),
-
           Scrollbar(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),

@@ -23,12 +23,6 @@ class _FadingTranslateWidgetState extends State<FadingTranslateWidget> {
   }
 
   @override
-  void didChangeDependencies() {
-    _isVisible = false; // Reset visibility when dependencies change
-    super.didChangeDependencies();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       duration: const Duration(milliseconds: 800),
