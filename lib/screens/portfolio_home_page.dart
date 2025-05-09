@@ -4,6 +4,7 @@ import 'about/about_section.dart';
 import 'contact/contact_section.dart';
 import 'projects/projects_section.dart';
 import 'skills/skills_section.dart';
+import 'widgets/colored_back_ground.dart';
 
 class PortfolioHomePage extends StatefulWidget {
   const PortfolioHomePage({super.key});
@@ -24,19 +25,31 @@ class _PortfolioHomePageState extends State<PortfolioHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Scrollbar(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: PageView(
-            scrollDirection: Axis.vertical,
-            children: [
-              AboutSection(),
-              SkillsSection(),
-              ProjectsSection(),
-              ContactSection(),
-            ],
+      body: Stack(
+        children: [
+          // Lottie.asset(
+          //   Constants.backgroundImage,
+          //   fit: BoxFit.cover,
+          //   height: MediaQuery.of(context).size.height,
+          //   width: MediaQuery.of(context).size.width,
+          // ),
+          ColoredBackGround(),
+
+          Scrollbar(
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: PageView(
+                scrollDirection: Axis.vertical,
+                children: [
+                  AboutSection(),
+                  SkillsSection(),
+                  ProjectsSection(),
+                  ContactSection(),
+                ],
+              ),
+            ),
           ),
-        ),
+        ],
       ),
     );
   }

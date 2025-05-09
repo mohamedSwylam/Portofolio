@@ -18,6 +18,5 @@ samples, guidance on mobile development, and a full API reference.
 
 Flutter | Dart | Firebase | State Management | SQLite | REST APIs | Git 
  
-add background
-update readme
 set the ui for wep
+update readme

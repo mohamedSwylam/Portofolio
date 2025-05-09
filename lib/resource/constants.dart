@@ -10,6 +10,7 @@ class Constants {
   static String rocketICon = 'assets/animated_icons/rocket.webp';
   static String starIcon = 'assets/animated_icons/star.webp';
   static String messageIcon = 'assets/animated_icons/message_send.json';
+  static String backgroundImage = 'assets/animated_icons/background.json';
 
   static String fontFamily = 'Rubik';
 
