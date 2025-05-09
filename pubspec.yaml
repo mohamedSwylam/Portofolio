@@ -56,6 +56,7 @@ dependencies:
   flex_color_scheme: ^8.1.1
   animated_text_kit: ^4.2.3
   lottie: ^3.3.1
+  carousel_slider: ^5.0.0
   # rive: ^0.13.20
   # http: ^1.3.0
 
@@ -100,6 +101,7 @@ flutter:
     - assets/skills_icons/ 
     - assets/projects_icons/
     - assets/animated_icons/
+    - assets/recommendations/
 
   fonts:
     - family: Rubik

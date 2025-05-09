@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
+import 'package:portfolio/screens/contact/widgets/recommendations_carousel.dart';
 import 'package:portfolio/screens/widgets/custom_icon_button.dart';
 
 import '../../resource/constants.dart';
@@ -32,10 +33,8 @@ class ContactSection extends StatelessWidget {
               ),
             ],
           ),
-          Placeholder(
-            fallbackHeight: MediaQuery.of(context).size.height * 0.4,
-            fallbackWidth: MediaQuery.of(context).size.width,
-          ),
+          const SizedBox(height: 10),
+          RecommendationsCarousel(),
           const SizedBox(height: 24),
           Row(
             children: [
@@ -63,22 +62,22 @@ class ContactSection extends StatelessWidget {
             children: [
               CustomIconButton(
                 icon: FontAwesomeIcons.envelope,
-                url: 'mailto:modather0ali@gmail.com',
+                url: 'mailto:modather0ali@gmail.com?subject=Hello%20Modather',
               ),
               const SizedBox(width: 16),
               CustomIconButton(
                 icon: FontAwesomeIcons.linkedin,
-                url: 'https://www.linkedin.com/in/modather-ali',
+                url: 'https://www.linkedin.com/in/ModatherAli',
               ),
               const SizedBox(width: 16),
               CustomIconButton(
                 icon: FontAwesomeIcons.github,
-                url: 'https://github.com/modather-ali',
+                url: 'https://github.com/ModatherAli',
               ),
               const SizedBox(width: 16),
               CustomIconButton(
                 icon: FontAwesomeIcons.whatsapp,
-                url: 'https://wa.me/+201557016433',
+                url: 'https://wa.me/+201557016433?text=Hello%20Modather',
               ),
             ],
           ),
