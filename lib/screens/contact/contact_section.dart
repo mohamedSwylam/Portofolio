@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
-import 'package:portfolio/screens/contact/widgets/recommendations_carousel.dart';
-import 'package:portfolio/screens/widgets/custom_icon_button.dart';
 
 import '../../resource/constants.dart';
+import '../widgets/custom_icon_button.dart';
 import '../widgets/fading_translate_widget.dart';
+import 'widgets/recommendations_carousel.dart';
 
 class ContactSection extends StatelessWidget {
   const ContactSection({super.key});

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/services/helper_services.dart';
+
+import '../../../services/helper_services.dart';
 
 class ProjectUrlIcon extends StatelessWidget {
   final Color color;

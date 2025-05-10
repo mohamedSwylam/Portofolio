@@ -1,22 +1,7 @@
-# portfolio
+# Portfolio
 
-A new Flutter project.
+This is a Portfolio built using Flutter💙
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-
-
-Flutter | Dart | Firebase | State Management | SQLite | REST APIs | Git 
  
-set the ui for wep
-update readme
+- [Find the web app here](https://modatherali.netlify.app)
+- [Install the apk file](https://drive.google.com/file/d/13PFHVwPeNhP8WCO3wnvCA3PjamvI12gP/view?usp=drivesdk)

@@ -1,8 +1,9 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/resource/constants.dart';
-import 'package:portfolio/screens/about/widgets/job_title.dart';
-import 'package:portfolio/screens/about/widgets/widget_circular_animator.dart';
+
+import '../../../resource/constants.dart';
+import 'job_title.dart';
+import 'widget_circular_animator.dart';
 
 class AboutMeWidget extends StatelessWidget {
   const AboutMeWidget({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:portfolio/screens/skills/widgets/skill_chip.dart';
-import 'package:portfolio/screens/widgets/fading_translate_widget.dart';
 
 import '../../modules/skill.dart';
 import '../../resource/constants.dart';
+import '../widgets/fading_translate_widget.dart';
+import 'widgets/skill_chip.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({super.key});

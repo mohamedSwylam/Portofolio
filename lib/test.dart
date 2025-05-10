@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:portfolio/resource/constants.dart';
+
+import 'resource/constants.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});

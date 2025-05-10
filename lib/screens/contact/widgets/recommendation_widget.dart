@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/modules/recommendation.dart';
-import 'package:portfolio/services/helper_services.dart';
+
+import '../../../modules/recommendation.dart';
+import '../../../services/helper_services.dart';
 
 class RecommendationWidget extends StatelessWidget {
   const RecommendationWidget({super.key, required this.recommendation});

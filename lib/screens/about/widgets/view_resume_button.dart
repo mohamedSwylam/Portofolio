@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/resource/constants.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../../../resource/constants.dart';
 
 class ViewResumeButton extends StatelessWidget {
   const ViewResumeButton({super.key});

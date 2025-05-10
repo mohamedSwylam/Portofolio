@@ -1,9 +1,9 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/screens/projects/widgets/app_widget.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
 import '../../../modules/project.dart';
+import 'app_widget.dart';
 
 class ProjectsBuilder extends StatelessWidget {
   const ProjectsBuilder({super.key});

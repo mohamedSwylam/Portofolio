@@ -1,9 +1,10 @@
 import 'package:animations/animations.dart';
 import 'package:fluid_dialog/fluid_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/modules/project.dart';
-import 'package:portfolio/screens/projects/widgets/app_info_dialog.dart';
 import 'package:responsive_builder/responsive_builder.dart';
+
+import '../../../modules/project.dart';
+import 'app_info_dialog.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({

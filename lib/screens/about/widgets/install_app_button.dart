@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio/resource/constants.dart';
-import 'package:portfolio/services/helper_services.dart';
+
+import '../../../resource/constants.dart';
+import '../../../services/helper_services.dart';
 
 class InstallAppButton extends StatelessWidget {
   const InstallAppButton({super.key});
