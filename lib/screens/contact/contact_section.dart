@@ -84,7 +84,7 @@ class ContactSection extends StatelessWidget {
           Container(
             alignment: Alignment.center,
             padding: const EdgeInsets.symmetric(vertical: 20),
-            child: Text('Made with Flutter 💙 by Modather Ali'),
+            child: Text('Made with Flutter 💙 by Modather'),
           ),
         ],
       ),
