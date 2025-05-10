@@ -6,14 +6,14 @@ import 'projects/projects_section.dart';
 import 'skills/skills_section.dart';
 import 'widgets/colored_back_ground.dart';
 
-class PortfolioHomePage extends StatefulWidget {
-  const PortfolioHomePage({super.key});
+class MainScreen extends StatefulWidget {
+  const MainScreen({super.key});
 
   @override
-  State<PortfolioHomePage> createState() => _PortfolioHomePageState();
+  State<MainScreen> createState() => _MainScreenState();
 }
 
-class _PortfolioHomePageState extends State<PortfolioHomePage> {
+class _MainScreenState extends State<MainScreen> {
   final PageController _pageController = PageController();
 
   @override

@@ -4,6 +4,8 @@ class Constants {
   static String cvURL =
       'https://www.canva.com/design/DAGmlFllxM0/8VQsBL-U4l3smi8J8qoC0g/view?utm_content=DAGmlFllxM0&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h66ec8f1ba7';
 
+  static String apkURL = '';
+
   static String avatarImage = 'assets/images/avatar.png';
 
   static String muscleIcon = 'assets/animated_icons/muscle.json';

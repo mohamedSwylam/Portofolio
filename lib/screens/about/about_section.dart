@@ -1,5 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:portfolio/services/helper_services.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../resource/constants.dart';
@@ -56,18 +58,39 @@ class AboutSection extends StatelessWidget {
             ),
           ),
           const SizedBox(height: 32),
-          OutlinedButton(
-            onPressed: () {
-              launchUrl(Uri.parse(Constants.cvURL));
-            },
-            style: OutlinedButton.styleFrom(
-              padding: const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
-              // backgroundColor: Colors.blue,
-            ),
-            child: const Text(
-              'View CV',
-              style: TextStyle(fontSize: 18),
-            ),
+          Row(
+            mainAxisAlignment: kIsWeb
+                ? MainAxisAlignment.spaceAround
+                : MainAxisAlignment.start,
+            children: [
+              OutlinedButton(
+                onPressed: () {
+                  launchUrl(Uri.parse(Constants.cvURL));
+                },
+                style: OutlinedButton.styleFrom(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
+                ),
+                child: const Text(
+                  'View CV',
+                  style: TextStyle(fontSize: 18),
+                ),
+              ),
+              if (kIsWeb)
+                OutlinedButton(
+                  onPressed: () {
+                    HelperServices.lunchUrl(Constants.apkURL);
+                  },
+                  style: OutlinedButton.styleFrom(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 32, vertical: 10),
+                  ),
+                  child: const Text(
+                    'Install App',
+                    style: TextStyle(fontSize: 18),
+                  ),
+                ),
+            ],
           ),
         ],
       ),

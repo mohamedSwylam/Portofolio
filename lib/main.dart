@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'resource/app_theme.dart';
-import 'screens/portfolio_home_page.dart';
+import 'screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'Modather Portfolio',
       debugShowCheckedModeBanner: false,
       theme: darkTheme,
-      home: const PortfolioHomePage(),
+      home: const MainScreen(),
     );
   }
 }
