@@ -9,5 +9,4 @@ This is a Portfolio built using Flutter💙
 
 
 ### Deme
-
 ![App Demo](assets/demo.gif)
