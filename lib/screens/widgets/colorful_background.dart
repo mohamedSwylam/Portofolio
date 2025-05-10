@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ColoredBackGround extends StatelessWidget {
-  const ColoredBackGround({super.key});
+class ColorfulBackground extends StatelessWidget {
+  const ColorfulBackground({super.key});
 
   @override
   Widget build(BuildContext context) {

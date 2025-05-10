@@ -1,13 +1,9 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio/services/helper_services.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
-import '../../resource/constants.dart';
 import '../widgets/fading_translate_widget.dart';
-import 'widgets/job_title.dart';
-import 'widgets/widget_circular_animator.dart';
+import 'widgets/about_section_desktop_view.dart';
+import 'widgets/about_section_mobile_view.dart';
 
 class AboutSection extends StatelessWidget {
   const AboutSection({super.key});
@@ -15,84 +11,13 @@ class AboutSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FadingTranslateWidget(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            children: [
-              WidgetCircularAnimator(
-                size: 120,
-                innerColor: Colors.blueAccent,
-                outerColor: Colors.lightBlueAccent,
-                child: Image.asset(Constants.avatarImage),
-              ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    TypewriterAnimatedText(
-                      'Hi, I\'m Modather',
-                      textStyle: TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        fontFamily: Constants.fontFamily,
-                      ),
-                      speed: const Duration(milliseconds: 100),
-                    ),
-                  ],
-                  totalRepeatCount: 1,
-                ),
-              ),
-            ],
-          ),
-          const SizedBox(height: 16),
-          JobTitle(),
-          const SizedBox(height: 24),
-          const Text(
-            'I create beautiful and functional mobile applications with Flutter, I have +3 years of experience dealing with Flutter framework, Passionate about clean code and great user experiences.',
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.white70,
-            ),
-          ),
-          const SizedBox(height: 32),
-          Row(
-            mainAxisAlignment: kIsWeb
-                ? MainAxisAlignment.spaceAround
-                : MainAxisAlignment.start,
-            children: [
-              OutlinedButton(
-                onPressed: () {
-                  launchUrl(Uri.parse(Constants.cvURL));
-                },
-                style: OutlinedButton.styleFrom(
-                  padding:
-                      const EdgeInsets.symmetric(horizontal: 32, vertical: 10),
-                ),
-                child: const Text(
-                  'View CV',
-                  style: TextStyle(fontSize: 18),
-                ),
-              ),
-              if (kIsWeb)
-                OutlinedButton(
-                  onPressed: () {
-                    HelperServices.lunchUrl(Constants.apkURL);
-                  },
-                  style: OutlinedButton.styleFrom(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 32, vertical: 10),
-                  ),
-                  child: const Text(
-                    'Install App',
-                    style: TextStyle(fontSize: 18),
-                  ),
-                ),
-            ],
-          ),
-        ],
+      child: ResponsiveBuilder(
+        builder: (context, sizingInformation) {
+          if (sizingInformation.isDesktop) {
+            return const AboutSectionDesktopView();
+          }
+          return AboutSectionMobileView();
+        },
       ),
     );
   }
