@@ -3,6 +3,7 @@ import 'package:fluid_dialog/fluid_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:portfolio/modules/project.dart';
 import 'package:portfolio/screens/projects/widgets/app_info_dialog.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({
@@ -42,29 +43,34 @@ class AppWidget extends StatelessWidget {
           ),
         );
       },
-      child: Column(
-        children: [
-          Card(
-            child: Container(
-              width: MediaQuery.of(context).size.width * 0.2,
-              height: MediaQuery.of(context).size.width * 0.2,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
-                  image: DecorationImage(
-                    image: AssetImage(project.icon),
-                  )),
+      child: ResponsiveBuilder(builder: (context, sizingInformation) {
+        return Column(
+          children: [
+            Card(
+              child: Container(
+                width: sizingInformation.isDesktop
+                    ? 150
+                    : MediaQuery.of(context).size.width * 0.2,
+                height: sizingInformation.isDesktop
+                    ? 150
+                    : MediaQuery.of(context).size.width * 0.2,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(
+                      image: AssetImage(project.icon),
+                    )),
+              ),
             ),
-          ),
-          Text(
-            project.name,
-            textAlign: TextAlign.center,
-            style: const TextStyle(
-              // fontSize: 16,
-              fontWeight: FontWeight.bold,
+            Text(
+              project.name,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-        ],
-      ),
+          ],
+        );
+      }),
     );
   }
 }
