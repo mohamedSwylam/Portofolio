@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import '../../../modules/recommendation.dart';
-import '../../../services/helper_services.dart';
 
 class RecommendationWidget extends StatelessWidget {
   const RecommendationWidget({super.key, required this.recommendation});
@@ -12,7 +11,7 @@ class RecommendationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        HelperServices.lunchUrl(recommendation.url);
+        // HelperServices.lunchUrl(recommendation.url);
       },
       child: Container(
         decoration: BoxDecoration(

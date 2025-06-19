@@ -10,9 +10,11 @@ class AppWidget extends StatelessWidget {
   const AppWidget({
     super.key,
     required this.project,
+    required this.sizingInformation,
   });
 
   final Project project;
+  final SizingInformation sizingInformation;
 
   @override
   Widget build(BuildContext context) {
@@ -44,34 +46,35 @@ class AppWidget extends StatelessWidget {
           ),
         );
       },
-      child: ResponsiveBuilder(builder: (context, sizingInformation) {
-        return Column(
-          children: [
-            Card(
-              child: Container(
-                width: sizingInformation.isDesktop
-                    ? 150
-                    : MediaQuery.of(context).size.width * 0.2,
-                height: sizingInformation.isDesktop
-                    ? 150
-                    : MediaQuery.of(context).size.width * 0.2,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    image: DecorationImage(
-                      image: AssetImage(project.icon),
-                    )),
-              ),
+      child: Column(
+        children: [
+          Card(
+            child: Container(
+              width: sizingInformation.isDesktop
+                  ? 150
+                  : sizingInformation.screenSize.width * 0.15,
+              height: sizingInformation.isDesktop
+                  ? 150
+                  : sizingInformation.screenSize.width * 0.15,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(
+                    image: AssetImage(project.icon),
+                    fit: BoxFit.fill,
+                  )),
             ),
-            Text(
-              project.name,
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontWeight: FontWeight.bold,
-              ),
+          ),
+          const SizedBox(height: 8),
+          Text(
+            project.name,
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: sizingInformation.isDesktop ? 14 : 12,
             ),
-          ],
-        );
-      }),
+          ),
+        ],
+      ),
     );
   }
 }

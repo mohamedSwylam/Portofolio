@@ -42,11 +42,17 @@ class AppInfoDialog extends StatelessWidget {
                       )),
                 ),
                 const SizedBox(width: 15),
-                Text(
-                  project.name,
-                  style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                Container(
+                  child: Text(
+                    project.name,
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      overflow: TextOverflow.ellipsis,
+                      fontWeight: FontWeight.bold,
+                      fontSize: sizingInformation.isDesktop ? 14 : 12,
+                    ),
                   ),
                 ),
               ],
@@ -77,7 +83,7 @@ class AppInfoDialog extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(5),
               decoration: BoxDecoration(
-                color: Colors.blueGrey.withOpacity(0.2),
+                color: Colors.blueGrey.withValues(alpha: 0.2),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Row(
@@ -100,8 +106,8 @@ class AppInfoDialog extends StatelessWidget {
                   if (project.appStoreUrl.isNotEmpty) const SizedBox(width: 25),
                   if (project.websiteUrl.isNotEmpty)
                     CustomIconButton(
-                      color: Colors.purple,
-                      icon: Icons.web,
+                      color: Colors.black,
+                      icon: FontAwesomeIcons.github,
                       url: project.websiteUrl,
                     ),
                 ],

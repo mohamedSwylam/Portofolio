@@ -1,4 +1,4 @@
-package dev.modather.portfolio
+package dev.swylam.portfolio
 
 import io.flutter.embedding.android.FlutterActivity
 

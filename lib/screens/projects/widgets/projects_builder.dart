@@ -1,4 +1,3 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 
@@ -14,27 +13,55 @@ class ProjectsBuilder extends StatelessWidget {
       if (sizingInformation.isDesktop) {
         return ProjectsBuilderDesktopView();
       }
-      return ProjectsBuilderMobileView();
+      return ProjectsBuilderMobileView(sizingInformation: sizingInformation);
     });
   }
 }
 
 class ProjectsBuilderMobileView extends StatelessWidget {
-  const ProjectsBuilderMobileView({super.key});
+  final SizingInformation sizingInformation;
+
+  const ProjectsBuilderMobileView({
+    super.key,
+    required this.sizingInformation,
+  });
 
   @override
   Widget build(BuildContext context) {
+    // Determine grid configuration based on screen size
+    int crossAxisCount;
+    double childAspectRatio;
+
+    if (sizingInformation.screenSize.width < 600) {
+      // Small mobile screens
+      crossAxisCount = 2;
+      childAspectRatio = 0.9;
+    } else if (sizingInformation.screenSize.width < 900) {
+      // Medium screens (tablets)
+      crossAxisCount = 3;
+      childAspectRatio = 1.0;
+    } else {
+      // Large screens
+      crossAxisCount = 4;
+      childAspectRatio = 1.1;
+    }
+
     return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        childAspectRatio: kIsWeb ? 1 : 0.8,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: crossAxisCount,
+        childAspectRatio: childAspectRatio,
+        crossAxisSpacing: 12,
+        mainAxisSpacing: 16,
       ),
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
       itemCount: projects.length,
       itemBuilder: (context, index) {
         final project = projects[index];
-        return AppWidget(project: project);
+        return AppWidget(
+          project: project,
+          sizingInformation: sizingInformation,
+        );
       },
     );
   }
@@ -45,12 +72,19 @@ class ProjectsBuilderDesktopView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Wrap(
-      spacing: 20,
-      runSpacing: 20,
-      children: projects.map((project) {
-        return AppWidget(project: project);
-      }).toList(),
+    return ResponsiveBuilder(
+      builder: (context, sizingInformation) {
+        return Wrap(
+          spacing: 20,
+          runSpacing: 20,
+          children: projects.map((project) {
+            return AppWidget(
+              project: project,
+              sizingInformation: sizingInformation,
+            );
+          }).toList(),
+        );
+      },
     );
   }
 }

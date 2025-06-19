@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 import '../../resource/constants.dart';
+import '../../resource/theme_provider.dart';
 import '../widgets/fading_translate_widget.dart';
 import 'widgets/projects_builder.dart';
 
@@ -9,38 +11,43 @@ class ProjectsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadingTranslateWidget(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
+    return Consumer<ThemeProvider>(
+      builder: (context, themeProvider, child) {
+        return FadingTranslateWidget(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                'Projects',
+              Row(
+                children: [
+                  Text(
+                    'Projects',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                      color: themeProvider.textColor,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Image.asset(
+                    Constants.rocketICon,
+                    height: 50,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 24),
+              Text(
+                'Here are some of my projects that I have worked on:',
                 style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                  color: themeProvider.secondaryTextColor,
                 ),
               ),
-              const SizedBox(width: 10),
-              Image.asset(
-                Constants.rocketICon,
-                height: 50,
-              ),
+              ProjectsBuilder(),
             ],
           ),
-          const SizedBox(height: 24),
-          const Text(
-            'Here are some of my projects that I have worked on:',
-            style: TextStyle(
-              fontSize: 18,
-              color: Colors.grey,
-            ),
-          ),
-          ProjectsBuilder(),
-        ],
-      ),
+        );
+      },
     );
   }
 }

@@ -72605,7 +72605,7 @@ grA(){return"\\"}}
 A.a22.prototype={
 UJ(a){$.afe().n(0,this,a)}}
 A.G2.prototype={
-K(a){return new A.w_(B.Tm,new A.a1f(),"Modather Portfolio",$.at2(),!1,null)}}
+K(a){return new A.w_(B.Tm,new A.a1f(),"swylam Portfolio",$.at2(),!1,null)}}
 A.a1f.prototype={
 $2(a,b){var s=A.c_(a,null,t.w).w.a5G(new A.hM(1))
 b.toString
@@ -72630,7 +72630,7 @@ $2(a,b){if(b.a===B.bs)return B.B_
 return new A.Ca(null)},
 $S:152}
 A.tb.prototype={
-K(a){var s=null,r="Hi, I'm Modather",q=A.Xp("assets/images/avatar.png",s,s),p=A.hG(s,s,s,s,s,s,s,s,"Rubik",s,s,30,s,s,B.aU,s,s,!0,s,s,s,s,s,s,s,s),o=B.f.U(1e5*(new A.ec(r).gt(0)+8)),n=t.F
+K(a){var s=null,r="Hi, I'm swylam",q=A.Xp("assets/images/avatar.png",s,s),p=A.hG(s,s,s,s,s,s,s,s,"Rubik",s,s,30,s,s,B.aU,s,s,!0,s,s,s,s,s,s,s,s),o=B.f.U(1e5*(new A.ec(r).gt(0)+8)),n=t.F
 return A.kr(A.a([A.jz(A.a([new A.yz(B.TM,B.TL,120,q,s),B.hx,A.ag8(A.ajh(A.a([new A.yr(B.b_,r,B.ak,p,new A.aE(o),new A.ec(r))],t.u6),!0,!1,1))],n),B.ai,B.ac),B.Y5,new A.Ff(s),B.hz,B.a27],n),B.aB,B.ai,B.km)}}
 A.C9.prototype={
 K(a){var s=null,r=t.F
@@ -72757,7 +72757,7 @@ s.aE$=null
 s.aK()}}
 A.Du.prototype={
 K(a){var s=null,r=t.F
-return new A.kw(A.kr(A.a([A.jz(A.a([B.a23,B.hw,A.Xp("assets/animated_icons/star.webp",40,s)],r),B.ai,B.ac),B.hy,new A.H_(s),B.hz,A.jz(A.a([B.a24,B.hw,A.alu("assets/animated_icons/message_send.json",50)],r),B.ai,B.ac),B.A9,B.a21,B.A9,A.jz(A.a([new A.i0(B.P7,"mailto:modather0ali@gmail.com?subject=Hello%20Modather",B.as,s),B.hx,new A.i0(B.P2,"https://www.linkedin.com/in/ModatherAli",B.as,s),B.hx,new A.i0(B.P4,"https://github.com/ModatherAli",B.as,s),B.hx,new A.i0(B.P6,"https://wa.me/+201557016433?text=Hello%20Modather",B.as,s)],r),B.ai,B.ac),A.eD(B.a8,A.nX("Made with Flutter \ud83d\udc99 by Modather",s,s),B.z,s,s,s,s,s,B.L_,s,s,s)],r),B.aB,B.v7,B.ac),s)}}
+return new A.kw(A.kr(A.a([A.jz(A.a([B.a23,B.hw,A.Xp("assets/animated_icons/star.webp",40,s)],r),B.ai,B.ac),B.hy,new A.H_(s),B.hz,A.jz(A.a([B.a24,B.hw,A.alu("assets/animated_icons/message_send.json",50)],r),B.ai,B.ac),B.A9,B.a21,B.A9,A.jz(A.a([new A.i0(B.P7,"mailto:swylam0ali@gmail.com?subject=Hello%20swylam",B.as,s),B.hx,new A.i0(B.P2,"https://www.linkedin.com/in/swylamAli",B.as,s),B.hx,new A.i0(B.P4,"https://github.com/swylamAli",B.as,s),B.hx,new A.i0(B.P6,"https://wa.me/+201557016433?text=Hello%20swylam",B.as,s)],r),B.ai,B.ac),A.eD(B.a8,A.nX("Made with Flutter \ud83d\udc99 by swylam",s,s),B.z,s,s,s,s,s,B.L_,s,s,s)],r),B.aB,B.v7,B.ac),s)}}
 A.qf.prototype={
 K(a){var s=null,r=A.b0(a),q=A.m7(15)
 return A.WE(s,A.eD(s,s,B.z,s,new A.dj(r.fr,A.afQ(B.BH,new A.iP(this.c.b,s,s)),s,q,B.R0,s,B.ax),s,s,s,s,s,s,s),B.aJ,!1,s,s,s,s,s,s,s,s,s,s,s,s,new A.a2R(this),s,s,s)}}
@@ -79690,7 +79690,7 @@ s($,"aHQ","afh",()=>new A.a7g(A.dW("/",!0,!1),A.dW("(^[a-zA-Z][-+.a-zA-Z\\d]*://
 s($,"aHO","ars",()=>A.azn())
 s($,"aH8","afe",()=>A.aku())
 r($,"aKg","afn",()=>A.a([A.q7("https://apps.apple.com/gb/app/origo-productions/id6474433384","The official app for the Arabic drama podcast series and episodes from Origo Productions.","https://play.google.com/store/apps/details?id=com.app.origoe","assets/projects_icons/origo.png","Origo",""),A.q7("https://apps.apple.com/us/app/id6743063821","An app that helps you commit to a daily recitation of dhikr through daily reminders and short 10-minute recitations.","https://play.google.com/store/apps/details?id=app.awradi.ten_minutes","assets/projects_icons/awradi.png","Awradi",""),A.q7("https://apps.apple.com/us/app/%D9%85%D9%86%D8%A7%D8%B3%D9%83-%D8%AD%D8%AC-%D8%A7%D9%84%D9%85%D8%B1%D8%A3%D8%A9-%D8%A7%D9%84%D9%85%D8%B3%D9%84%D9%85%D8%A9/id6742852996","A website and an app built with Flutter detailing Hajj and Umrah rituals for Muslim women.","https://play.google.com/store/apps/details?id=com.hajjwoman","assets/projects_icons/hajjwoman.png","Women's Hajj","https://hajjwoman.netlify.app"),A.q7("","An application that contains a library of musical melodies and soothing audio recordings, which are used in meditation sessions.","https://play.google.com/store/apps/details?id=app.meditationtime.meditation_time","assets/projects_icons/meditation_time.png","Meditation time",""),A.q7("","An app for purchasing gift cards (such as PUBG and Google Play cards).","","assets/projects_icons/zul_cards.png","Zul Cards","https://mostaql.com/portfolio/2032397-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D9%84%D8%B4%D8%B1%D8%A7%D8%A1-%D8%A7%D9%84%D8%A8%D8%B7%D8%A7%D9%82%D8%A7%D8%AA-%D9%88-%D8%AA%D8%AD%D9%82%D9%8A%D9%82-%D8%A7%D9%84%D8%A7%D8%B1%D8%A8%D8%A7%D8%AD"),A.q7("","Chat with AI using OpenAI API","","assets/projects_icons/chatbot.png","AI ChatBot","https://mostaql.com/portfolio/1770281-%D8%AA%D8%B7%D8%A8%D9%8A%D9%82-%D8%AF%D8%B1%D8%AF%D8%B4%D8%A9-%D9%85%D8%B9-%D8%A7%D9%84%D8%B0%D9%83%D8%A7%D8%A1-%D8%A7%D9%84%D8%A5%D8%B5%D8%B7%D9%86%D8%A7%D8%B9%D9%8A"),A.q7("","This application displays American products and their alternatives from local (Arab) products. Its goal is to boycott all Western products of companies that support the Zionist entity.","","assets/projects_icons/mithqal.jpg","Mithqal","https://mithqal.en.uptodown.com/android")],A.a9("t<q6>")))
-r($,"aKh","aj2",()=>A.a([A.qe("assets/recommendations/review_1.png","https://khamsat.com/user/modather_ali0/reviews/792552"),A.qe("assets/recommendations/review_2.png","https://khamsat.com/user/modather_ali0/reviews/813913"),A.qe("assets/recommendations/review_3.png","https://khamsat.com/user/modather_ali0/reviews/840107"),A.qe("assets/recommendations/review_4.png","https://khamsat.com/user/modather_ali0/reviews/922655"),A.qe("assets/recommendations/review_5.png","https://khamsat.com/user/modather_ali0/reviews/942356"),A.qe("assets/recommendations/review_6.png","https://khamsat.com/user/modather_ali0/reviews/964090"),A.qe("assets/recommendations/review_7.png","https://khamsat.com/user/modather_ali0/reviews/967362")],A.a9("t<GZ>")))
+r($,"aKh","aj2",()=>A.a([A.qe("assets/recommendations/review_1.png","https://khamsat.com/user/swylam_ali0/reviews/792552"),A.qe("assets/recommendations/review_2.png","https://khamsat.com/user/swylam_ali0/reviews/813913"),A.qe("assets/recommendations/review_3.png","https://khamsat.com/user/swylam_ali0/reviews/840107"),A.qe("assets/recommendations/review_4.png","https://khamsat.com/user/swylam_ali0/reviews/922655"),A.qe("assets/recommendations/review_5.png","https://khamsat.com/user/swylam_ali0/reviews/942356"),A.qe("assets/recommendations/review_6.png","https://khamsat.com/user/swylam_ali0/reviews/964090"),A.qe("assets/recommendations/review_7.png","https://khamsat.com/user/swylam_ali0/reviews/967362")],A.a9("t<GZ>")))
 r($,"aK4","at2",()=>{var q=null
 return A.avv(q,q,q,q,!0,0,q,q,q,q,!1,q,q,q,q,q,"Rubik",q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,q,B.FX,B.oA,q,q,q,q,q,q,q,q,!1,!1,q,q,q,q,q,q,!1,!0,q,!0,!1,6,q,q).gabg()})
 s($,"aHI","arq",()=>new A.D())
